@@ -1,6 +1,6 @@
 {
-  "urlRandomness": "a4-chx",
-  "hostType": "tunnel",
+  "urlRandomness": "ey-adr",
+  "hostType": "lan",
   "lanType": "ip",
   "dev": true,
   "minify": false,

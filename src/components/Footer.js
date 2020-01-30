@@ -1,19 +1,13 @@
 import React from 'react';
-import { 
-    StyleSheet, 
-    Text, 
-    View,
-    TextInput,
-    KeyboardAvoidingView,
-    TouchableOpacity
-} from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 
 export default class Footer extends React.Component {
 
     render() {
 
         return (
-            <KeyboardAvoidingView 
+
+            <KeyboardAvoidingView
                 style={styles.footer}
                 behavior="position" 
                 enabled={true}
@@ -21,8 +15,8 @@ export default class Footer extends React.Component {
 
                 <View style={styles.footerInner}>
 
-                    <TouchableOpacity 
-                        style={styles.btn}
+                    <TouchableOpacity
+                        style={styles.button}
                         onPress={ () => this.props.onNoteAdd() }
                     >
                         <Text style={styles.btnText}>+</Text>
@@ -34,8 +28,8 @@ export default class Footer extends React.Component {
                         placeholderTextColor={'rgba(255, 255, 255, .7)'}
                         onChangeText={ (val) => this.props.onChangeText(val) }
                         value={this.props.inputValue}
-                    />
-
+                    /> 
+                
                 </View>
 
             </KeyboardAvoidingView>
@@ -57,7 +51,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
     },
-    btn: {
+    button: {
         zIndex: 1,
         position: 'absolute',
         right: 20,
@@ -69,7 +63,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderWidth: 2,
         borderColor: '#fff',
-        backgroundColor: '#fa3664'
+        backgroundColor: '#33adff'
     },
     btnText: {
         color: '#fff',
@@ -81,6 +75,8 @@ const styles = StyleSheet.create({
         padding: 20,
         fontSize: 16,
         color: '#fff',
-        backgroundColor: '#262526'
+        backgroundColor: '#262526',
+        borderTopWidth: 2,
+        borderTopColor: '#656765',
     }
 });
